@@ -9,10 +9,25 @@
 /* Begin PBXBuildFile section */
 		7DAB52821D3CA2BB0080B7D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52811D3CA2BB0080B7D6 /* AppDelegate.swift */; };
 		7DAB52841D3CA2BB0080B7D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52831D3CA2BB0080B7D6 /* ViewController.swift */; };
-		7DAB52871D3CA2BB0080B7D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DAB52851D3CA2BB0080B7D6 /* Main.storyboard */; };
 		7DAB52891D3CA2BB0080B7D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DAB52881D3CA2BB0080B7D6 /* Assets.xcassets */; };
 		7DAB528C1D3CA2BB0080B7D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DAB528A1D3CA2BB0080B7D6 /* LaunchScreen.storyboard */; };
 		7DAB52971D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52961D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayoutTests.swift */; };
+		7DAB52AB1D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52A21D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayout.swift */; };
+		7DAB52AC1D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52A31D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayoutAttributes.swift */; };
+		7DAB52AD1D3CA2DE0080B7D6 /* RLBaseCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52A61D3CA2DE0080B7D6 /* RLBaseCollectionController.swift */; };
+		7DAB52AE1D3CA2DE0080B7D6 /* RLGrowHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52A71D3CA2DE0080B7D6 /* RLGrowHeaderController.swift */; };
+		7DAB52AF1D3CA2DE0080B7D6 /* RLLockedHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52A81D3CA2DE0080B7D6 /* RLLockedHeaderController.swift */; };
+		7DAB52B01D3CA2DE0080B7D6 /* RLParallaxHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52A91D3CA2DE0080B7D6 /* RLParallaxHeaderController.swift */; };
+		7DAB52B11D3CA2DE0080B7D6 /* RLStickyParallaxHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52AA1D3CA2DE0080B7D6 /* RLStickyParallaxHeaderController.swift */; };
+		7DAB52B41D3CA36C0080B7D6 /* RLCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52B31D3CA36C0080B7D6 /* RLCollectionCell.swift */; };
+		7DAB52B61D3CA39C0080B7D6 /* RLSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52B51D3CA39C0080B7D6 /* RLSectionHeader.swift */; };
+		7DAB52B91D3CA3C70080B7D6 /* RLAlwaysOnTopHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52B71D3CA3C70080B7D6 /* RLAlwaysOnTopHeader.swift */; };
+		7DAB52BA1D3CA3C70080B7D6 /* RLAlwaysOnTopHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DAB52B81D3CA3C70080B7D6 /* RLAlwaysOnTopHeader.xib */; };
+		7DAB52BC1D3CA3DE0080B7D6 /* RLParallaxHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DAB52BB1D3CA3DE0080B7D6 /* RLParallaxHeader.xib */; };
+		7DB84F0E1D3CA41400B1EE08 /* RLSearchBarHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DB84F0D1D3CA41400B1EE08 /* RLSearchBarHeader.xib */; };
+		7DB84F101D3CA42E00B1EE08 /* RLGrowHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DB84F0F1D3CA42E00B1EE08 /* RLGrowHeader.xib */; };
+		7DB84F131D3CA50100B1EE08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB84F111D3CA50100B1EE08 /* Main.storyboard */; };
+		7DB84F161D3CAF3200B1EE08 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB84F151D3CAF3200B1EE08 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +44,28 @@
 		7DAB527E1D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RLStickyHeaderFlowLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DAB52811D3CA2BB0080B7D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DAB52831D3CA2BB0080B7D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7DAB52861D3CA2BB0080B7D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DAB52881D3CA2BB0080B7D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DAB528B1D3CA2BB0080B7D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DAB528D1D3CA2BB0080B7D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DAB52921D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RLStickyHeaderFlowLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DAB52961D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLStickyHeaderFlowLayoutTests.swift; sourceTree = "<group>"; };
 		7DAB52981D3CA2BB0080B7D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DAB52A21D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLStickyHeaderFlowLayout.swift; sourceTree = "<group>"; };
+		7DAB52A31D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLStickyHeaderFlowLayoutAttributes.swift; sourceTree = "<group>"; };
+		7DAB52A61D3CA2DE0080B7D6 /* RLBaseCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLBaseCollectionController.swift; sourceTree = "<group>"; };
+		7DAB52A71D3CA2DE0080B7D6 /* RLGrowHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLGrowHeaderController.swift; sourceTree = "<group>"; };
+		7DAB52A81D3CA2DE0080B7D6 /* RLLockedHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLLockedHeaderController.swift; sourceTree = "<group>"; };
+		7DAB52A91D3CA2DE0080B7D6 /* RLParallaxHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLParallaxHeaderController.swift; sourceTree = "<group>"; };
+		7DAB52AA1D3CA2DE0080B7D6 /* RLStickyParallaxHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLStickyParallaxHeaderController.swift; sourceTree = "<group>"; };
+		7DAB52B31D3CA36C0080B7D6 /* RLCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLCollectionCell.swift; sourceTree = "<group>"; };
+		7DAB52B51D3CA39C0080B7D6 /* RLSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLSectionHeader.swift; sourceTree = "<group>"; };
+		7DAB52B71D3CA3C70080B7D6 /* RLAlwaysOnTopHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLAlwaysOnTopHeader.swift; sourceTree = "<group>"; };
+		7DAB52B81D3CA3C70080B7D6 /* RLAlwaysOnTopHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLAlwaysOnTopHeader.xib; sourceTree = "<group>"; };
+		7DAB52BB1D3CA3DE0080B7D6 /* RLParallaxHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLParallaxHeader.xib; sourceTree = "<group>"; };
+		7DB84F0D1D3CA41400B1EE08 /* RLSearchBarHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLSearchBarHeader.xib; sourceTree = "<group>"; };
+		7DB84F0F1D3CA42E00B1EE08 /* RLGrowHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLGrowHeader.xib; sourceTree = "<group>"; };
+		7DB84F121D3CA50100B1EE08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7DB84F151D3CAF3200B1EE08 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB84F161D3CAF3200B1EE08 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +93,7 @@
 				7DAB52801D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayout */,
 				7DAB52951D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayoutTests */,
 				7DAB527F1D3CA2BB0080B7D6 /* Products */,
+				7DB84F141D3CAF1800B1EE08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +109,11 @@
 		7DAB52801D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
+				7DAB52A11D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayout */,
+				7DAB52A41D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayoutDemo */,
 				7DAB52811D3CA2BB0080B7D6 /* AppDelegate.swift */,
 				7DAB52831D3CA2BB0080B7D6 /* ViewController.swift */,
-				7DAB52851D3CA2BB0080B7D6 /* Main.storyboard */,
+				7DB84F111D3CA50100B1EE08 /* Main.storyboard */,
 				7DAB52881D3CA2BB0080B7D6 /* Assets.xcassets */,
 				7DAB528A1D3CA2BB0080B7D6 /* LaunchScreen.storyboard */,
 				7DAB528D1D3CA2BB0080B7D6 /* Info.plist */,
@@ -94,6 +128,58 @@
 				7DAB52981D3CA2BB0080B7D6 /* Info.plist */,
 			);
 			path = RLStickyHeaderFlowLayoutTests;
+			sourceTree = "<group>";
+		};
+		7DAB52A11D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				7DAB52A21D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayout.swift */,
+				7DAB52A31D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayoutAttributes.swift */,
+			);
+			path = RLStickyHeaderFlowLayout;
+			sourceTree = "<group>";
+		};
+		7DAB52A41D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayoutDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7DAB52A51D3CA2DE0080B7D6 /* Controller */,
+				7DAB52B21D3CA2F40080B7D6 /* View */,
+			);
+			path = RLStickyHeaderFlowLayoutDemo;
+			sourceTree = "<group>";
+		};
+		7DAB52A51D3CA2DE0080B7D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7DAB52A61D3CA2DE0080B7D6 /* RLBaseCollectionController.swift */,
+				7DAB52A71D3CA2DE0080B7D6 /* RLGrowHeaderController.swift */,
+				7DAB52A81D3CA2DE0080B7D6 /* RLLockedHeaderController.swift */,
+				7DAB52A91D3CA2DE0080B7D6 /* RLParallaxHeaderController.swift */,
+				7DAB52AA1D3CA2DE0080B7D6 /* RLStickyParallaxHeaderController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7DAB52B21D3CA2F40080B7D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7DAB52B31D3CA36C0080B7D6 /* RLCollectionCell.swift */,
+				7DAB52B51D3CA39C0080B7D6 /* RLSectionHeader.swift */,
+				7DAB52B71D3CA3C70080B7D6 /* RLAlwaysOnTopHeader.swift */,
+				7DAB52B81D3CA3C70080B7D6 /* RLAlwaysOnTopHeader.xib */,
+				7DAB52BB1D3CA3DE0080B7D6 /* RLParallaxHeader.xib */,
+				7DB84F0D1D3CA41400B1EE08 /* RLSearchBarHeader.xib */,
+				7DB84F0F1D3CA42E00B1EE08 /* RLGrowHeader.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7DB84F141D3CAF1800B1EE08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DB84F151D3CAF3200B1EE08 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +263,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB84F131D3CA50100B1EE08 /* Main.storyboard in Resources */,
 				7DAB528C1D3CA2BB0080B7D6 /* LaunchScreen.storyboard in Resources */,
+				7DB84F101D3CA42E00B1EE08 /* RLGrowHeader.xib in Resources */,
+				7DAB52BC1D3CA3DE0080B7D6 /* RLParallaxHeader.xib in Resources */,
+				7DB84F0E1D3CA41400B1EE08 /* RLSearchBarHeader.xib in Resources */,
+				7DAB52BA1D3CA3C70080B7D6 /* RLAlwaysOnTopHeader.xib in Resources */,
 				7DAB52891D3CA2BB0080B7D6 /* Assets.xcassets in Resources */,
-				7DAB52871D3CA2BB0080B7D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +287,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DAB52AB1D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayout.swift in Sources */,
+				7DAB52AE1D3CA2DE0080B7D6 /* RLGrowHeaderController.swift in Sources */,
 				7DAB52841D3CA2BB0080B7D6 /* ViewController.swift in Sources */,
+				7DAB52AD1D3CA2DE0080B7D6 /* RLBaseCollectionController.swift in Sources */,
+				7DAB52B11D3CA2DE0080B7D6 /* RLStickyParallaxHeaderController.swift in Sources */,
+				7DAB52AC1D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayoutAttributes.swift in Sources */,
 				7DAB52821D3CA2BB0080B7D6 /* AppDelegate.swift in Sources */,
+				7DAB52B61D3CA39C0080B7D6 /* RLSectionHeader.swift in Sources */,
+				7DAB52B91D3CA3C70080B7D6 /* RLAlwaysOnTopHeader.swift in Sources */,
+				7DAB52B01D3CA2DE0080B7D6 /* RLParallaxHeaderController.swift in Sources */,
+				7DAB52AF1D3CA2DE0080B7D6 /* RLLockedHeaderController.swift in Sources */,
+				7DAB52B41D3CA36C0080B7D6 /* RLCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,20 +321,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7DAB52851D3CA2BB0080B7D6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7DAB52861D3CA2BB0080B7D6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7DAB528A1D3CA2BB0080B7D6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7DAB528B1D3CA2BB0080B7D6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7DB84F111D3CA50100B1EE08 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DB84F121D3CA50100B1EE08 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -388,6 +488,7 @@
 				7DAB529D1D3CA2BB0080B7D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DAB529E1D3CA2BB0080B7D6 /* Build configuration list for PBXNativeTarget "RLStickyHeaderFlowLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +497,7 @@
 				7DAB52A01D3CA2BB0080B7D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
