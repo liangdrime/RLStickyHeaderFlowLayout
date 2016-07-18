@@ -13,7 +13,9 @@ import UIKit
 let RLStickyHeaderParallaxHeader = "RLStickyHeaderParallaxHeader"
 let kHeaderZIndex = 1024
 
-class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
+public class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
+    
+    // Set the default size of parallaxHeader by this property
     private var _parallaxHeaderReferenceSize: CGSize! = CGSizeZero
     var parallaxHeaderReferenceSize: CGSize! {
         get {
@@ -21,20 +23,21 @@ class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
         }
         set {
             self._parallaxHeaderReferenceSize = newValue
-            // Make sure we update the layout
+            // Make sure to update the layout
             self.invalidateLayout()
         }
     }
+    // Mininum size of parallaxHeader
     var parallaxHeaderMinimumReferenceSize:CGSize! = CGSizeZero
     var parallaxHeaderAlwaysOnTop:Bool! = false
     var disableStickyHeaders:Bool! = false
     
     // MARK: overider layout attributes
-    override func prepareLayout() {
+    override public func prepareLayout() {
         super.prepareLayout()
     }
     
-    override func initialLayoutAttributesForAppearingSupplementaryElementOfKind(elementKind: String, atIndexPath elementIndexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
+    override public func initialLayoutAttributesForAppearingSupplementaryElementOfKind(elementKind: String, atIndexPath elementIndexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
         let attributes = super.initialLayoutAttributesForAppearingSupplementaryElementOfKind(elementKind, atIndexPath: elementIndexPath)
         if elementKind == RLStickyHeaderParallaxHeader {
             // sticky header do not need to offset
@@ -49,7 +52,7 @@ class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
         return attributes
     }
     
-    override func finalLayoutAttributesForDisappearingSupplementaryElementOfKind(elementKind: String, atIndexPath elementIndexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
+    override public func finalLayoutAttributesForDisappearingSupplementaryElementOfKind(elementKind: String, atIndexPath elementIndexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
         if elementKind == RLStickyHeaderParallaxHeader {
             let attribute = self.layoutAttributesForSupplementaryViewOfKind(elementKind, atIndexPath: elementIndexPath) as? RLStickyHeaderFlowLayoutAttributes
             
@@ -60,7 +63,7 @@ class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
         }
     }
     
-    override func layoutAttributesForSupplementaryViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
+    override public func layoutAttributesForSupplementaryViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
         var attributes = super.layoutAttributesForSupplementaryViewOfKind(elementKind, atIndexPath: indexPath)
         if (attributes == nil) && (elementKind == RLStickyHeaderParallaxHeader) {
             attributes = RLStickyHeaderFlowLayoutAttributes.init(forSupplementaryViewOfKind:elementKind, withIndexPath:indexPath)
@@ -68,7 +71,11 @@ class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
         return attributes
     }
     
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    /**
+     *  Core function
+     *  Reutrn the attributes will be used, you can custom these attributes to fit.
+     */
+    override public func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         if self.collectionView!.dataSource != nil {
             // The rect should compensate the header size
             var adjustedRect = rect
@@ -177,7 +184,7 @@ class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
         }
     }
     
-    override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
+    override public func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
         let attributes = super.layoutAttributesForItemAtIndexPath(indexPath)!.copy() as? UICollectionViewLayoutAttributes
         var frame = attributes!.frame
         frame.origin.y += self.parallaxHeaderReferenceSize.height
@@ -185,7 +192,7 @@ class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
         return attributes
     }
     
-    override func collectionViewContentSize() -> CGSize {
+    override public func collectionViewContentSize() -> CGSize {
         // If not part of view hierarchy then return CGSizeZero (as in docs).
         // Call super.collectionViewContentSize can cause EXC_BAD_ACCESS when collectionView has no superview.
         if self.collectionView!.superview == nil {
@@ -196,11 +203,11 @@ class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
         return size
     }
     
-    override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+    override public func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
         return true
     }
     
-    override class func layoutAttributesClass() -> AnyClass {
+    override class public func layoutAttributesClass() -> AnyClass {
         return RLStickyHeaderFlowLayoutAttributes.self
     }
     
@@ -227,6 +234,10 @@ class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
         
     }
     
+    /**
+     *  Update the parallax header, reuslt is: orgin.y of header attribute will be changed to keep the positon of header always same
+     *  `parallaxHeaderMinimumReferenceSize` determines the mininum size of the header, the height of the header will change when scrolling, and you parallax header is created by this character.
+     */
     func updateParallaxHeaderAttribute(currentAttribute: RLStickyHeaderFlowLayoutAttributes) {
         var frame = currentAttribute.frame
         frame.size.width = self.parallaxHeaderReferenceSize.width

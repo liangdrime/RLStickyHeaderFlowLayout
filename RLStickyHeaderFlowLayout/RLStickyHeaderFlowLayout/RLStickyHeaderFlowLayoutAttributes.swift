@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-class RLStickyHeaderFlowLayoutAttributes: UICollectionViewLayoutAttributes {
+public class RLStickyHeaderFlowLayoutAttributes: UICollectionViewLayoutAttributes {
     var progressiveness: CGFloat! = 0
     
-    override var zIndex: Int {
+    override public var zIndex: Int {
         get {
             return super.zIndex
         }
@@ -22,7 +22,7 @@ class RLStickyHeaderFlowLayoutAttributes: UICollectionViewLayoutAttributes {
         }
     }
     
-    override func copyWithZone(zone: NSZone) -> AnyObject {
+    override public func copyWithZone(zone: NSZone) -> AnyObject {
         let copy:RLStickyHeaderFlowLayoutAttributes = super.copyWithZone(zone) as! RLStickyHeaderFlowLayoutAttributes
         copy.progressiveness = self.progressiveness
         return copy

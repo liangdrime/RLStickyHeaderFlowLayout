@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7DAB527D1D3CA2BB0080B7D6"
-               BuildableName = "RLStickyHeaderFlowLayout.app"
-               BlueprintName = "RLStickyHeaderFlowLayout"
+               BlueprintIdentifier = "7D2AE1371D3D26A200B91337"
+               BuildableName = "RLStickyHeaderFlowLayout.framework"
+               BlueprintName = "RLStickyHeaderFlowLayoutFramework"
                ReferencedContainer = "container:RLStickyHeaderFlowLayout.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,36 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7DAB52911D3CA2BB0080B7D6"
-               BuildableName = "RLStickyHeaderFlowLayoutTests.xctest"
-               BlueprintName = "RLStickyHeaderFlowLayoutTests"
-               ReferencedContainer = "container:RLStickyHeaderFlowLayout.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7D2AE1401D3D26A200B91337"
-               BuildableName = "RLStickyHeaderFlowLayoutFrameworkTests.xctest"
-               BlueprintName = "RLStickyHeaderFlowLayoutFrameworkTests"
-               ReferencedContainer = "container:RLStickyHeaderFlowLayout.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7DAB527D1D3CA2BB0080B7D6"
-            BuildableName = "RLStickyHeaderFlowLayout.app"
-            BlueprintName = "RLStickyHeaderFlowLayout"
-            ReferencedContainer = "container:RLStickyHeaderFlowLayout.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -71,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7DAB527D1D3CA2BB0080B7D6"
-            BuildableName = "RLStickyHeaderFlowLayout.app"
-            BlueprintName = "RLStickyHeaderFlowLayout"
+            BlueprintIdentifier = "7D2AE1371D3D26A200B91337"
+            BuildableName = "RLStickyHeaderFlowLayout.framework"
+            BlueprintName = "RLStickyHeaderFlowLayoutFramework"
             ReferencedContainer = "container:RLStickyHeaderFlowLayout.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -90,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7DAB527D1D3CA2BB0080B7D6"
-            BuildableName = "RLStickyHeaderFlowLayout.app"
-            BlueprintName = "RLStickyHeaderFlowLayout"
+            BlueprintIdentifier = "7D2AE1371D3D26A200B91337"
+            BuildableName = "RLStickyHeaderFlowLayout.framework"
+            BlueprintName = "RLStickyHeaderFlowLayoutFramework"
             ReferencedContainer = "container:RLStickyHeaderFlowLayout.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
