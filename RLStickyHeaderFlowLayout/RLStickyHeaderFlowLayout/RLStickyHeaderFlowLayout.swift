@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 
-let RLStickyHeaderParallaxHeader = "RLStickyHeaderParallaxHeader"
-let kHeaderZIndex = 1024
+public let RLStickyHeaderParallaxHeader = "RLStickyHeaderParallaxHeader"
+public let kHeaderZIndex = 1024
 
 public class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
     

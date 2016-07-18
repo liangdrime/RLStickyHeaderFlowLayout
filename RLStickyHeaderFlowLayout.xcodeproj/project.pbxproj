@@ -544,6 +544,7 @@
 				INFOPLIST_FILE = RLStickyHeaderFlowLayoutFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = mengliang.RLStickyHeaderFlowLayoutFramework;
 				PRODUCT_NAME = RLStickyHeaderFlowLayout;
 				SKIP_INSTALL = YES;
@@ -564,6 +565,7 @@
 				INFOPLIST_FILE = RLStickyHeaderFlowLayoutFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = mengliang.RLStickyHeaderFlowLayoutFramework;
 				PRODUCT_NAME = RLStickyHeaderFlowLayout;
 				SKIP_INSTALL = YES;
@@ -738,6 +740,7 @@
 				7D2AE1501D3D26A200B91337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D2AE1551D3D26A200B91337 /* Build configuration list for PBXNativeTarget "RLStickyHeaderFlowLayoutFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -746,6 +749,7 @@
 				7D2AE1521D3D26A200B91337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DAB52791D3CA2BB0080B7D6 /* Build configuration list for PBXProject "RLStickyHeaderFlowLayout" */ = {
 			isa = XCConfigurationList;
