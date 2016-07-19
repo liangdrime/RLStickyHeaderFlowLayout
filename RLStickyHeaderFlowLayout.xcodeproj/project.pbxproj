@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D2AE1421D3D26A200B91337 /* RLStickyHeaderFlowLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2AE1381D3D26A200B91337 /* RLStickyHeaderFlowLayout.framework */; };
-		7D2AE1491D3D26A200B91337 /* RLStickyHeaderFlowLayoutFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AE1481D3D26A200B91337 /* RLStickyHeaderFlowLayoutFrameworkTests.swift */; };
-		7D2AE14D1D3D26A200B91337 /* RLStickyHeaderFlowLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2AE1381D3D26A200B91337 /* RLStickyHeaderFlowLayout.framework */; };
-		7D2AE14E1D3D26A200B91337 /* RLStickyHeaderFlowLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2AE1381D3D26A200B91337 /* RLStickyHeaderFlowLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7D2AE1561D3D26F800B91337 /* RLStickyHeaderFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52A21D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayout.swift */; };
-		7D2AE1571D3D26F800B91337 /* RLStickyHeaderFlowLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52A31D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayoutAttributes.swift */; };
-		7D2AE1581D3D26FE00B91337 /* RLStickyHeaderFlowLayout.swift in Headers */ = {isa = PBXBuildFile; fileRef = 7DAB52A21D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayout.swift */; };
-		7D2AE1591D3D26FE00B91337 /* RLStickyHeaderFlowLayoutAttributes.swift in Headers */ = {isa = PBXBuildFile; fileRef = 7DAB52A31D3CA2DE0080B7D6 /* RLStickyHeaderFlowLayoutAttributes.swift */; };
 		7DAB52821D3CA2BB0080B7D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52811D3CA2BB0080B7D6 /* AppDelegate.swift */; };
 		7DAB52841D3CA2BB0080B7D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52831D3CA2BB0080B7D6 /* ViewController.swift */; };
 		7DAB52891D3CA2BB0080B7D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DAB52881D3CA2BB0080B7D6 /* Assets.xcassets */; };
@@ -39,27 +31,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7D2AE1431D3D26A200B91337 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7DAB52761D3CA2BB0080B7D6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7D2AE1371D3D26A200B91337;
-			remoteInfo = RLStickyHeaderFlowLayoutFramework;
-		};
-		7D2AE1451D3D26A200B91337 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7DAB52761D3CA2BB0080B7D6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7DAB527D1D3CA2BB0080B7D6;
-			remoteInfo = RLStickyHeaderFlowLayout;
-		};
-		7D2AE14B1D3D26A200B91337 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7DAB52761D3CA2BB0080B7D6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7D2AE1371D3D26A200B91337;
-			remoteInfo = RLStickyHeaderFlowLayoutFramework;
-		};
 		7DAB52931D3CA2BB0080B7D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7DAB52761D3CA2BB0080B7D6 /* Project object */;
@@ -76,7 +47,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7D2AE14E1D3D26A200B91337 /* RLStickyHeaderFlowLayout.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,12 +54,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7D2AE1381D3D26A200B91337 /* RLStickyHeaderFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RLStickyHeaderFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D2AE13A1D3D26A200B91337 /* RLStickyHeaderFlowLayoutFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLStickyHeaderFlowLayoutFramework.h; sourceTree = "<group>"; };
-		7D2AE13C1D3D26A200B91337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D2AE1411D3D26A200B91337 /* RLStickyHeaderFlowLayoutFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RLStickyHeaderFlowLayoutFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D2AE1481D3D26A200B91337 /* RLStickyHeaderFlowLayoutFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLStickyHeaderFlowLayoutFrameworkTests.swift; sourceTree = "<group>"; };
-		7D2AE14A1D3D26A200B91337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DAB527E1D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RLStickyHeaderFlowLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DAB52811D3CA2BB0080B7D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DAB52831D3CA2BB0080B7D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,27 +82,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7D2AE1341D3D26A200B91337 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7D2AE13E1D3D26A200B91337 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D2AE1421D3D26A200B91337 /* RLStickyHeaderFlowLayout.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7DAB527B1D3CA2BB0080B7D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7DB84F161D3CAF3200B1EE08 /* MapKit.framework in Frameworks */,
-				7D2AE14D1D3D26A200B91337 /* RLStickyHeaderFlowLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,31 +100,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7D2AE1391D3D26A200B91337 /* RLStickyHeaderFlowLayoutFramework */ = {
-			isa = PBXGroup;
-			children = (
-				7D2AE13A1D3D26A200B91337 /* RLStickyHeaderFlowLayoutFramework.h */,
-				7D2AE13C1D3D26A200B91337 /* Info.plist */,
-			);
-			path = RLStickyHeaderFlowLayoutFramework;
-			sourceTree = "<group>";
-		};
-		7D2AE1471D3D26A200B91337 /* RLStickyHeaderFlowLayoutFrameworkTests */ = {
-			isa = PBXGroup;
-			children = (
-				7D2AE1481D3D26A200B91337 /* RLStickyHeaderFlowLayoutFrameworkTests.swift */,
-				7D2AE14A1D3D26A200B91337 /* Info.plist */,
-			);
-			path = RLStickyHeaderFlowLayoutFrameworkTests;
-			sourceTree = "<group>";
-		};
 		7DAB52751D3CA2BB0080B7D6 = {
 			isa = PBXGroup;
 			children = (
 				7DAB52801D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayout */,
 				7DAB52951D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayoutTests */,
-				7D2AE1391D3D26A200B91337 /* RLStickyHeaderFlowLayoutFramework */,
-				7D2AE1471D3D26A200B91337 /* RLStickyHeaderFlowLayoutFrameworkTests */,
 				7DAB527F1D3CA2BB0080B7D6 /* Products */,
 				7DB84F141D3CAF1800B1EE08 /* Frameworks */,
 			);
@@ -187,8 +115,6 @@
 			children = (
 				7DAB527E1D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayout.app */,
 				7DAB52921D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayoutTests.xctest */,
-				7D2AE1381D3D26A200B91337 /* RLStickyHeaderFlowLayout.framework */,
-				7D2AE1411D3D26A200B91337 /* RLStickyHeaderFlowLayoutFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,56 +197,7 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		7D2AE1351D3D26A200B91337 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D2AE1581D3D26FE00B91337 /* RLStickyHeaderFlowLayout.swift in Headers */,
-				7D2AE1591D3D26FE00B91337 /* RLStickyHeaderFlowLayoutAttributes.swift in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		7D2AE1371D3D26A200B91337 /* RLStickyHeaderFlowLayoutFramework */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7D2AE1531D3D26A200B91337 /* Build configuration list for PBXNativeTarget "RLStickyHeaderFlowLayoutFramework" */;
-			buildPhases = (
-				7D2AE1331D3D26A200B91337 /* Sources */,
-				7D2AE1341D3D26A200B91337 /* Frameworks */,
-				7D2AE1351D3D26A200B91337 /* Headers */,
-				7D2AE1361D3D26A200B91337 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = RLStickyHeaderFlowLayoutFramework;
-			productName = RLStickyHeaderFlowLayoutFramework;
-			productReference = 7D2AE1381D3D26A200B91337 /* RLStickyHeaderFlowLayout.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7D2AE1401D3D26A200B91337 /* RLStickyHeaderFlowLayoutFrameworkTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7D2AE1551D3D26A200B91337 /* Build configuration list for PBXNativeTarget "RLStickyHeaderFlowLayoutFrameworkTests" */;
-			buildPhases = (
-				7D2AE13D1D3D26A200B91337 /* Sources */,
-				7D2AE13E1D3D26A200B91337 /* Frameworks */,
-				7D2AE13F1D3D26A200B91337 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7D2AE1441D3D26A200B91337 /* PBXTargetDependency */,
-				7D2AE1461D3D26A200B91337 /* PBXTargetDependency */,
-			);
-			name = RLStickyHeaderFlowLayoutFrameworkTests;
-			productName = RLStickyHeaderFlowLayoutFrameworkTests;
-			productReference = 7D2AE1411D3D26A200B91337 /* RLStickyHeaderFlowLayoutFrameworkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		7DAB527D1D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayout */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DAB529B1D3CA2BB0080B7D6 /* Build configuration list for PBXNativeTarget "RLStickyHeaderFlowLayout" */;
@@ -333,7 +210,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7D2AE14C1D3D26A200B91337 /* PBXTargetDependency */,
 			);
 			name = RLStickyHeaderFlowLayout;
 			productName = RLStickyHeaderFlowLayout;
@@ -368,13 +244,6 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Roy lee";
 				TargetAttributes = {
-					7D2AE1371D3D26A200B91337 = {
-						CreatedOnToolsVersion = 7.3.1;
-					};
-					7D2AE1401D3D26A200B91337 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 7DAB527D1D3CA2BB0080B7D6;
-					};
 					7DAB527D1D3CA2BB0080B7D6 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -399,27 +268,11 @@
 			targets = (
 				7DAB527D1D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayout */,
 				7DAB52911D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayoutTests */,
-				7D2AE1371D3D26A200B91337 /* RLStickyHeaderFlowLayoutFramework */,
-				7D2AE1401D3D26A200B91337 /* RLStickyHeaderFlowLayoutFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7D2AE1361D3D26A200B91337 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7D2AE13F1D3D26A200B91337 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7DAB527C1D3CA2BB0080B7D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -444,23 +297,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7D2AE1331D3D26A200B91337 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D2AE1561D3D26F800B91337 /* RLStickyHeaderFlowLayout.swift in Sources */,
-				7D2AE1571D3D26F800B91337 /* RLStickyHeaderFlowLayoutAttributes.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7D2AE13D1D3D26A200B91337 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D2AE1491D3D26A200B91337 /* RLStickyHeaderFlowLayoutFrameworkTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7DAB527A1D3CA2BB0080B7D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -491,21 +327,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7D2AE1441D3D26A200B91337 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7D2AE1371D3D26A200B91337 /* RLStickyHeaderFlowLayoutFramework */;
-			targetProxy = 7D2AE1431D3D26A200B91337 /* PBXContainerItemProxy */;
-		};
-		7D2AE1461D3D26A200B91337 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7DAB527D1D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayout */;
-			targetProxy = 7D2AE1451D3D26A200B91337 /* PBXContainerItemProxy */;
-		};
-		7D2AE14C1D3D26A200B91337 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7D2AE1371D3D26A200B91337 /* RLStickyHeaderFlowLayoutFramework */;
-			targetProxy = 7D2AE14B1D3D26A200B91337 /* PBXContainerItemProxy */;
-		};
 		7DAB52941D3CA2BB0080B7D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7DAB527D1D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayout */;
@@ -533,70 +354,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7D2AE14F1D3D26A200B91337 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RLStickyHeaderFlowLayoutFramework/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_BUNDLE_IDENTIFIER = mengliang.RLStickyHeaderFlowLayoutFramework;
-				PRODUCT_NAME = RLStickyHeaderFlowLayout;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7D2AE1501D3D26A200B91337 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RLStickyHeaderFlowLayoutFramework/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_BUNDLE_IDENTIFIER = mengliang.RLStickyHeaderFlowLayoutFramework;
-				PRODUCT_NAME = RLStickyHeaderFlowLayout;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7D2AE1511D3D26A200B91337 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = RLStickyHeaderFlowLayoutFrameworkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mengliang.RLStickyHeaderFlowLayoutFrameworkTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RLStickyHeaderFlowLayout.app/RLStickyHeaderFlowLayout";
-			};
-			name = Debug;
-		};
-		7D2AE1521D3D26A200B91337 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = RLStickyHeaderFlowLayoutFrameworkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mengliang.RLStickyHeaderFlowLayoutFrameworkTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RLStickyHeaderFlowLayout.app/RLStickyHeaderFlowLayout";
-			};
-			name = Release;
-		};
 		7DAB52991D3CA2BB0080B7D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -733,24 +490,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D2AE1531D3D26A200B91337 /* Build configuration list for PBXNativeTarget "RLStickyHeaderFlowLayoutFramework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7D2AE14F1D3D26A200B91337 /* Debug */,
-				7D2AE1501D3D26A200B91337 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7D2AE1551D3D26A200B91337 /* Build configuration list for PBXNativeTarget "RLStickyHeaderFlowLayoutFrameworkTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7D2AE1511D3D26A200B91337 /* Debug */,
-				7D2AE1521D3D26A200B91337 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		7DAB52791D3CA2BB0080B7D6 /* Build configuration list for PBXProject "RLStickyHeaderFlowLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

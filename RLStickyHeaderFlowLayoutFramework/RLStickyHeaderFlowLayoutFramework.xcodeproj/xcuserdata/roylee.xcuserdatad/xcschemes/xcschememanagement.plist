@@ -4,30 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>RLStickyHeaderFlowLayout.xcscheme</key>
+		<key>RLStickyHeaderFlowLayoutFramework.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7D2AE1371D3D26A200B91337</key>
+		<key>7DDE6C1D1D3DB96E00CFF7AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D2AE1401D3D26A200B91337</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7DAB527D1D3CA2BB0080B7D6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7DAB52911D3CA2BB0080B7D6</key>
+		<key>7DDE6C271D3DB96E00CFF7AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
