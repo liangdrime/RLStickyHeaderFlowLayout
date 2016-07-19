@@ -23,7 +23,7 @@ github "Roylee-ML/RLStickyHeaderFlowLayout"
 ```
 <br>
 ### Use StroyBoard
-If you want to use stroyboard for your collectionview. Now `RLStickyHeaderFlowLayout` does not perfect support stroyboard, because it is always unable to change the custom class of flowlayout in storyboard to `RLStickyHeaderFlowLayout`. However, there is a way to solve this problem:<br>
+If you want to use stroyboard for your collectionview. Now `RLStickyHeaderFlowLayout.framework` does not perfect support stroyboard, because it is always unable to change the custom class of flowlayout in storyboard to `RLStickyHeaderFlowLayout`. However, there is a way to solve this problem:<br>
 
 - Create a class subclass of `RLStickyHeaderFlowLayout` like this:
 
@@ -37,6 +37,7 @@ class MyStickyHeaderLayout: RLStickyHeaderFlowLayout {
 
 ```
 >Just subclass from `RLStickyHeaderFlowLayout` and do nothing in this file. If can not subclass from  `RLStickyHeaderFlowLayout`, subcass from `UICollectionViewFlowlayout` and  change the superclass manually.
+
 <br>
 
 - Custom the class of your flowlayout in the storyboad,select the class `MyStickyHeaderLayout` created before.
