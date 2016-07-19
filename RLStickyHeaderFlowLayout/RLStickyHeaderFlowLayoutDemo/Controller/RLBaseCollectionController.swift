@@ -25,7 +25,6 @@ class RLBaseCollectionController: UICollectionViewController {
         
         self.reloadLayout()
         self.collectionView?.registerNib(self.headerNib, forSupplementaryViewOfKind: RLStickyHeaderParallaxHeader, withReuseIdentifier: "header")
-        print("header is \(self.headerNib)")
     }
     
     override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {

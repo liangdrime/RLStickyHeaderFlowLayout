@@ -23,9 +23,6 @@ class RLStickyParallaxHeaderController: RLBaseCollectionController {
         self.headerNib = UINib.init(nibName: "RLAlwaysOnTopHeader", bundle: NSBundle.mainBundle())
         
         // init data
-        for index in 1...5 {
-            print("\(index) times 5 is \(index * 5)")
-        }
         var data: [String:String] = [:]
         for index in 0..<20 {
             data[String(index)] = "Song "

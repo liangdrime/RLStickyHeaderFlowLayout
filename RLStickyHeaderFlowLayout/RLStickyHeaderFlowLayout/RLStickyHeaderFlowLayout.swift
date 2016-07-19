@@ -187,7 +187,7 @@ public class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
             }
             
             // For debugging purpose
-            self.debugLayoutAttributes(allItems)
+//            self.debugLayoutAttributes(allItems)
             
             return allItems
         } else {
