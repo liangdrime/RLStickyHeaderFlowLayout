@@ -99,14 +99,18 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
-@class NSIndexPath;
-@class UICollectionViewLayoutAttributes;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC24RLStickyHeaderFlowLayout24RLStickyHeaderFlowLayout")
 @interface RLStickyHeaderFlowLayout : UICollectionViewFlowLayout
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
 
-/// Flowlayout methods: need not be implemented
+@class NSIndexPath;
+@class UICollectionViewLayoutAttributes;
+
+@interface RLStickyHeaderFlowLayout (SWIFT_EXTENSION(RLStickyHeaderFlowLayout))
 - (void)prepareLayout;
 - (UICollectionViewLayoutAttributes * _Nullable)initialLayoutAttributesForAppearingSupplementaryElementOfKind:(NSString * _Nonnull)elementKind atIndexPath:(NSIndexPath * _Nonnull)elementIndexPath;
 - (UICollectionViewLayoutAttributes * _Nullable)finalLayoutAttributesForDisappearingSupplementaryElementOfKind:(NSString * _Nonnull)elementKind atIndexPath:(NSIndexPath * _Nonnull)elementIndexPath;
@@ -116,12 +120,6 @@ SWIFT_CLASS("_TtC24RLStickyHeaderFlowLayout24RLStickyHeaderFlowLayout")
 - (CGSize)collectionViewContentSize;
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds;
 + (Class _Nonnull)layoutAttributesClass;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface RLStickyHeaderFlowLayout (SWIFT_EXTENSION(RLStickyHeaderFlowLayout))
 @end
 
 

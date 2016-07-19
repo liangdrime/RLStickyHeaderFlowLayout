@@ -14,13 +14,12 @@ import UIKit
 public let RLStickyHeaderParallaxHeader = "RLStickyHeaderParallaxHeader"
 let kHeaderZIndex = 1024
 
-
 public class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
-    
     var _parallaxHeaderReferenceSize: CGSize! = CGSizeZero
-    ///
-    /// Below four properties is used to config the parallax header and section header
-    ///
+    /**
+     *  Below four properties is used to config the parallax header and section header
+     *  If you want to have a header(eg.parallax header) on the top, you must registe this kind key `RLStickyHeaderParallaxHeader` with your `UICollectionReusableView`
+     */
     /// Set the default size of parallaxHeader by this property
     public var parallaxHeaderReferenceSize: CGSize! {
         get {
@@ -32,21 +31,18 @@ public class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
             self.invalidateLayout()
         }
     }
-    ///
-    /// If you want to have a header(eg.parallax header) on the top, you must registe this kind key `RLStickyHeaderParallaxHeader` with your `UICollectionReusableView`
     /// Mininum size of parallaxHeader
     public var parallaxHeaderMinimumReferenceSize:CGSize! = CGSizeZero
-    ///
     /// Set the parallax header on top or move when scroll, default is false
     public var parallaxHeaderAlwaysOnTop:Bool! = false
-    ///
     /// If you set this property true the section header will not sticky, default is false
     public var disableStickyHeaders:Bool! = false
-    ///
-    ///
-    ///
-    ///
-    /// Flowlayout methods: need not be implemented
+}
+
+
+extension RLStickyHeaderFlowLayout {
+    
+    // Override layout methods
     override public func prepareLayout() {
         super.prepareLayout()
     }
@@ -223,7 +219,7 @@ public class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
     }
     
     // MARK:Helper
-    func updateHeaderAttributes(attributes: UICollectionViewLayoutAttributes, lastCellAttributes lastAttributes: UICollectionViewLayoutAttributes) {
+    private func updateHeaderAttributes(attributes: UICollectionViewLayoutAttributes, lastCellAttributes lastAttributes: UICollectionViewLayoutAttributes) {
         let currentBounds = self.collectionView!.bounds
         attributes.zIndex = kHeaderZIndex
         attributes.hidden = false
@@ -249,7 +245,7 @@ public class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
      *  Update the parallax header, reuslt is: orgin.y of header attribute will be changed to keep the positon of header always same
      *  `parallaxHeaderMinimumReferenceSize` determines the mininum size of the header, the height of the header will change when scrolling, and you parallax header is created by this character.
      */
-    func updateParallaxHeaderAttribute(currentAttribute: RLStickyHeaderFlowLayoutAttributes) {
+    private func updateParallaxHeaderAttribute(currentAttribute: RLStickyHeaderFlowLayoutAttributes) {
         var frame = currentAttribute.frame
         frame.size.width = self.parallaxHeaderReferenceSize.width
         frame.size.height = self.parallaxHeaderReferenceSize.height
@@ -280,6 +276,21 @@ public class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
         }
         
         currentAttribute.frame = CGRectMake(frame.origin.x, y, frame.size.width, height)
+    }
+    
+    // MARK: Debuging
+    private func debugLayoutAttributes(layoutAttributes: [UICollectionViewLayoutAttributes]) {
+        var hasInvalid: Bool = false
+        for attr in layoutAttributes {
+            hasInvalid = !attr.isValid()
+            if (hasInvalid) {
+                break
+            }
+        }
+        
+        if (hasInvalid) {
+            print("[Invalid] RLStickyHeaderFlowLayout: \(layoutAttributes)")
+        }
     }
 
 }
@@ -319,21 +330,6 @@ extension UICollectionViewLayoutAttributes {
     }
 }
 
-extension RLStickyHeaderFlowLayout {
-    func debugLayoutAttributes(layoutAttributes: [UICollectionViewLayoutAttributes]) {
-        var hasInvalid: Bool = false
-        for attr in layoutAttributes {
-            hasInvalid = !attr.isValid()
-            if (hasInvalid) {
-                break
-            }
-        }
-        
-        if (hasInvalid) {
-            print("[Invalid] RLStickyHeaderFlowLayout: \(layoutAttributes)")
-        }
-    }
-}
 
 
 
