@@ -21,7 +21,7 @@ RLStickyHeaderFlowLayout 是支持[Carthage](https://github.com/Carthage/Carthag
 ```
 github "Roylee-ML/RLStickyHeaderFlowLayout"
 ```
->关于安装使用** Carthage **可以参考他人博客或者直接查看[官方文档](https://github.com/Carthage/Carthage)
+>关于**安装使用Carthage**，可以参考他人博客或者直接查看[官方文档](https://github.com/Carthage/Carthage)
 
 <br>
 
