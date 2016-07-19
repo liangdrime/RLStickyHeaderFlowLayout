@@ -7,7 +7,7 @@
 <br>
 This project is a swift version of the [CSStickyHeaderFlowLayout](https://github.com/jamztang/CSStickyHeaderFlowLayout), the original address is [https://github.com/jamztang/CSStickyHeaderFlowLayout](https://github.com/jamztang/CSStickyHeaderFlowLayout)
 <br>
-This project is for `UICollectionView` to replace `UITableView`, it can be achieved with the same features as the tableview: sticky section header, and  it can be used to complete parallax header effect
+It is for `UICollectionView` to replace `UITableView`, it can be achieved with the same features as the tableview: sticky section header, and  it can be used to complete parallax header effect
 <br>
 
 
@@ -41,7 +41,7 @@ class MyStickyHeaderLayout: RLStickyHeaderFlowLayout {
 
 - Custom the class of your flowlayout in the storyboad,select the class `MyStickyHeaderLayout` created before.
 
-![CustomClass](https://github.com/Roylee-ML/RLStickyHeaderFlowLayout/blob/master/ScreenShots/correctclass.ong)
+![CustomClass](https://github.com/Roylee-ML/RLStickyHeaderFlowLayout/blob/master/ScreenShots/correctclass.png)
 <br>
 >If you can choose your layout class(e.g `MyStickyHeaderLayout`),and the Module is not none, it's sucessfull.
 <br>
