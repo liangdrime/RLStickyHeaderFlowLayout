@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 public class RLStickyHeaderFlowLayoutAttributes: UICollectionViewLayoutAttributes {
-    var progressiveness: CGFloat! = 0
+    public var progressiveness: CGFloat! = 0
     
     override public var zIndex: Int {
         get {

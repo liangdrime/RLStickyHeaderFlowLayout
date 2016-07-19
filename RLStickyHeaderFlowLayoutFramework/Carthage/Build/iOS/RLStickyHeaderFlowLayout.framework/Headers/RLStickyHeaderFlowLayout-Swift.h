@@ -105,6 +105,8 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC24RLStickyHeaderFlowLayout24RLStickyHeaderFlowLayout")
 @interface RLStickyHeaderFlowLayout : UICollectionViewFlowLayout
+
+/// Flowlayout methods: need not be implemented
 - (void)prepareLayout;
 - (UICollectionViewLayoutAttributes * _Nullable)initialLayoutAttributesForAppearingSupplementaryElementOfKind:(NSString * _Nonnull)elementKind atIndexPath:(NSIndexPath * _Nonnull)elementIndexPath;
 - (UICollectionViewLayoutAttributes * _Nullable)finalLayoutAttributesForDisappearingSupplementaryElementOfKind:(NSString * _Nonnull)elementKind atIndexPath:(NSIndexPath * _Nonnull)elementIndexPath;

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-// RepresentedElementKind key for the parallax header, if you want to have a header on the top, you must registe this kind key with your `UICollectionReusableView`
+/// RepresentedElementKind key for the parallax header, if you want to have a header on the top, you must registe this kind key with your `UICollectionReusableView`
 public let RLStickyHeaderParallaxHeader = "RLStickyHeaderParallaxHeader"
 let kHeaderZIndex = 1024
 
@@ -18,10 +18,10 @@ let kHeaderZIndex = 1024
 public class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
     
     var _parallaxHeaderReferenceSize: CGSize! = CGSizeZero
-    /**
-     *  Below four properties is used to config the parallax header and section header
-     */
-    /** Set the default size of parallaxHeader by this property */
+    ///
+    /// Below four properties is used to config the parallax header and section header
+    ///
+    /// Set the default size of parallaxHeader by this property
     public var parallaxHeaderReferenceSize: CGSize! {
         get {
             return self._parallaxHeaderReferenceSize
@@ -32,17 +32,21 @@ public class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
             self.invalidateLayout()
         }
     }
-    /** If you want to have a header(eg.parallax header) on the top, you must registe this kind key `RLStickyHeaderParallaxHeader` with your `UICollectionReusableView` */
-    /** Mininum size of parallaxHeader */
+    ///
+    /// If you want to have a header(eg.parallax header) on the top, you must registe this kind key `RLStickyHeaderParallaxHeader` with your `UICollectionReusableView`
+    /// Mininum size of parallaxHeader
     public var parallaxHeaderMinimumReferenceSize:CGSize! = CGSizeZero
-    /** Set the parallax header on top or move when scroll, default is false */
+    ///
+    /// Set the parallax header on top or move when scroll, default is false
     public var parallaxHeaderAlwaysOnTop:Bool! = false
-    /** If you set this property true the section header will not sticky, default is false */
+    ///
+    /// If you set this property true the section header will not sticky, default is false
     public var disableStickyHeaders:Bool! = false
-    
-    
-    
-    // MARK: overider layout attributes
+    ///
+    ///
+    ///
+    ///
+    /// Flowlayout methods: need not be implemented
     override public func prepareLayout() {
         super.prepareLayout()
     }
