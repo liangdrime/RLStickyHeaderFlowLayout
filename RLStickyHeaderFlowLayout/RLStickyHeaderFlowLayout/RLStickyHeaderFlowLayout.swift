@@ -14,12 +14,14 @@ import UIKit
 public let RLStickyHeaderParallaxHeader = "RLStickyHeaderParallaxHeader"
 let kHeaderZIndex = 1024
 
+
 public class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
     var _parallaxHeaderReferenceSize: CGSize! = CGSizeZero
-    /**
-     *  Below four properties is used to config the parallax header and section header
-     *  If you want to have a header(eg.parallax header) on the top, you must registe this kind key `RLStickyHeaderParallaxHeader` with your `UICollectionReusableView`
-     */
+    /// Properties:
+    ///
+    /// - Below four properties is used to config the parallax header and section header
+    /// - If you want to have a header(eg.parallax header) on the top, you must registe this kind key `RLStickyHeaderParallaxHeader` with your `UICollectionReusableView`
+    ///
     /// Set the default size of parallaxHeader by this property
     public var parallaxHeaderReferenceSize: CGSize! {
         get {
@@ -218,7 +220,7 @@ extension RLStickyHeaderFlowLayout {
         return RLStickyHeaderFlowLayoutAttributes.self
     }
     
-    // MARK:Helper
+    // MARK: Private Helper
     private func updateHeaderAttributes(attributes: UICollectionViewLayoutAttributes, lastCellAttributes lastAttributes: UICollectionViewLayoutAttributes) {
         let currentBounds = self.collectionView!.bounds
         attributes.zIndex = kHeaderZIndex
