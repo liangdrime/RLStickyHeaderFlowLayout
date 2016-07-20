@@ -1,5 +1,7 @@
 # RLStickyHeaderFlowLayout
 [![Carthage](https://img.shields.io/badge/Carthage-v0.1-28B9FE.svg)](https://github.com/Carthage/Carthage)
+[![CocoaPods](https://img.shields.io/badge/pod-compatible-28B9FE.svg)](http://cocoapods.org/pods/RLStickyHeaderFlowLayout)
+
 ![Platforms](https://img.shields.io/badge/platforms-iOS-brightgreen.svg)
 ![Language](https://img.shields.io/badge/language-Swift-orange.svg)
 
