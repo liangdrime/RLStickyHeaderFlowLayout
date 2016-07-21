@@ -14,26 +14,26 @@ class RLStickyParallaxHeaderController: RLBaseCollectionController {
         super.init(coder: aDecoder)
         
         // config the header
-        self.parallaxHeaderReferenceHeight = 426
-        self.parallaxHeaderMinimumReferenceHeight = 110
-        self.parallaxHeaderAlwaysOnTop = true
-        self.disableStickyHeaders = true
+        parallaxHeaderReferenceHeight = 426
+        parallaxHeaderMinimumReferenceHeight = 110
+        parallaxHeaderAlwaysOnTop = true
+        disableStickyHeaders = true
         
         // load header
-        self.headerNib = UINib.init(nibName: "RLAlwaysOnTopHeader", bundle: NSBundle.mainBundle())
+        headerNib = UINib.init(nibName: "RLAlwaysOnTopHeader", bundle: NSBundle.mainBundle())
         
         // init data
         var data: [String:String] = [:]
         for index in 0..<20 {
             data[String(index)] = "Song "
         }
-        self.sections = [data]
+        sections = [data]
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.collectionView!.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+        collectionView!.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     }
     
     override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {

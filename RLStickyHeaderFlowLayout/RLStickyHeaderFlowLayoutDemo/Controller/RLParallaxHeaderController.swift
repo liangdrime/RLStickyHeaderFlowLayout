@@ -14,19 +14,19 @@ class RLParallaxHeaderController: RLBaseCollectionController {
         super.init(coder: aDecoder)
         
         // config the header
-        self.parallaxHeaderReferenceHeight = 200
-        self.parallaxHeaderMinimumReferenceHeight = 0
+        parallaxHeaderReferenceHeight = 200
+        parallaxHeaderMinimumReferenceHeight = 0
         
         // load header
-        self.headerNib = UINib.init(nibName: "RLParallaxHeader", bundle: NSBundle.mainBundle())
+        headerNib = UINib.init(nibName: "RLParallaxHeader", bundle: NSBundle.mainBundle())
         
         // init data
-        self.sections = [["Twitter":"http://twitter.com"],
-                         ["Facebook":"http://facebook.com"],
-                         ["Tumblr":"http://tumblr.com"],
-                         ["Pinterest":"http://pinterest.com"],
-                         ["Instagram":"http://instagram.com"],
-                         ["Github":"http://github.com"],]
+        sections = [["Twitter":"http://twitter.com"],
+                    ["Facebook":"http://facebook.com"],
+                    ["Tumblr":"http://tumblr.com"],
+                    ["Pinterest":"http://pinterest.com"],
+                    ["Instagram":"http://instagram.com"],
+                    ["Github":"http://github.com"],]
     }
     
     override func viewDidLoad() {
@@ -34,9 +34,9 @@ class RLParallaxHeaderController: RLBaseCollectionController {
     }
     
     @IBAction func reloadButtonDidPress(sender: AnyObject) {
-        let indexSet = NSIndexSet.init(indexesInRange: NSMakeRange(0, self.collectionView!.numberOfSections()))
+        let indexSet = NSIndexSet.init(indexesInRange: NSMakeRange(0, collectionView!.numberOfSections()))
         
-        self.collectionView!.reloadSections(indexSet)
+        collectionView!.reloadSections(indexSet)
     }
     
     

@@ -13,41 +13,41 @@ class RLLockedHeaderController: RLBaseCollectionController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         // config the header
-        self.parallaxHeaderReferenceHeight = 44
-        self.parallaxHeaderMinimumReferenceHeight = 44
+        parallaxHeaderReferenceHeight = 44
+        parallaxHeaderMinimumReferenceHeight = 44
         
         // load header
-        self.headerNib = UINib.init(nibName: "RLSearchBarHeader", bundle: NSBundle.mainBundle())
+        headerNib = UINib.init(nibName: "RLSearchBarHeader", bundle: NSBundle.mainBundle())
         
         // init data
-        self.sections = [["Twitter":"http://twitter.com"],
-                         ["Facebook":"http://facebook.com"],
-                         ["Tumblr":"http://tumblr.com"],
-                         ["Pinterest":"http://pinterest.com"],
-                         ["Instagram":"http://instagram.com"],
-                         ["Github":"http://github.com"],
-                         ["Twitter":"http://twitter.com"],
-                         ["Facebook":"http://facebook.com"],
-                         ["Tumblr":"http://tumblr.com"],
-                         ["Pinterest":"http://pinterest.com"],
-                         ["Instagram":"http://instagram.com"],
-                         ["Github":"http://github.com"],]
+        sections = [["Twitter":"http://twitter.com"],
+                    ["Facebook":"http://facebook.com"],
+                    ["Tumblr":"http://tumblr.com"],
+                    ["Pinterest":"http://pinterest.com"],
+                    ["Instagram":"http://instagram.com"],
+                    ["Github":"http://github.com"],
+                    ["Twitter":"http://twitter.com"],
+                    ["Facebook":"http://facebook.com"],
+                    ["Tumblr":"http://tumblr.com"],
+                    ["Pinterest":"http://pinterest.com"],
+                    ["Instagram":"http://instagram.com"],
+                    ["Github":"http://github.com"],]
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.collectionView!.scrollIndicatorInsets = UIEdgeInsetsMake(44, 0, 0, 0);
+        collectionView!.scrollIndicatorInsets = UIEdgeInsetsMake(44, 0, 0, 0);
         
         let add = UIBarButtonItem.init(title: "Add", style: .Plain, target: self, action: #selector(RLLockedHeaderController.add))
-        self.navigationItem.rightBarButtonItem = add
+        navigationItem.rightBarButtonItem = add
     }
     
     func add() {
         
         weak var weakSelf = self
-        self.collectionView?.performBatchUpdates({ 
+        collectionView?.performBatchUpdates({
             let new = [["Twitter":"http://twitter.com"],
                 ["Facebook":"http://facebook.com"],
                 ["Tumblr":"http://tumblr.com"],

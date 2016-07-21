@@ -165,9 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				7DAB52A61D3CA2DE0080B7D6 /* RLBaseCollectionController.swift */,
-				7DAB52A71D3CA2DE0080B7D6 /* RLGrowHeaderController.swift */,
-				7DAB52A81D3CA2DE0080B7D6 /* RLLockedHeaderController.swift */,
 				7DAB52A91D3CA2DE0080B7D6 /* RLParallaxHeaderController.swift */,
+				7DAB52A81D3CA2DE0080B7D6 /* RLLockedHeaderController.swift */,
+				7DAB52A71D3CA2DE0080B7D6 /* RLGrowHeaderController.swift */,
 				7DAB52AA1D3CA2DE0080B7D6 /* RLStickyParallaxHeaderController.swift */,
 			);
 			path = Controller;

@@ -23,48 +23,48 @@ class RLBaseCollectionController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.reloadLayout()
-        self.collectionView?.registerNib(self.headerNib, forSupplementaryViewOfKind: RLStickyHeaderParallaxHeader, withReuseIdentifier: "header")
+        reloadLayout()
+        collectionView?.registerNib(headerNib, forSupplementaryViewOfKind: RLStickyHeaderParallaxHeader, withReuseIdentifier: "header")
     }
     
     override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
-        self.reloadLayout()
+        reloadLayout()
     }
     
     func reloadLayout() {
-        let layout = self.collectionViewLayout as? RLStickyHeaderFlowLayout
+        let layout = collectionViewLayout as? RLStickyHeaderFlowLayout
         
         if (layout != nil) {
-            layout!.itemSize = CGSizeMake(self.view.frame.size.width, layout!.itemSize.height)
+            layout!.itemSize = CGSizeMake(view.frame.size.width, layout!.itemSize.height)
             
-            layout!.parallaxHeaderReferenceSize = CGSizeMake(self.view.frame.size.width, self.parallaxHeaderReferenceHeight)
+            layout!.parallaxHeaderReferenceSize = CGSizeMake(view.frame.size.width, parallaxHeaderReferenceHeight)
             
-            layout!.parallaxHeaderMinimumReferenceSize = CGSizeMake(self.view.frame.size.width, self.parallaxHeaderMinimumReferenceHeight)
-            layout!.parallaxHeaderAlwaysOnTop = self.parallaxHeaderAlwaysOnTop
+            layout!.parallaxHeaderMinimumReferenceSize = CGSizeMake(view.frame.size.width, parallaxHeaderMinimumReferenceHeight)
+            layout!.parallaxHeaderAlwaysOnTop = parallaxHeaderAlwaysOnTop
             
             // If we want to disable the sticky header effect
-            layout!.disableStickyHeaders = self.disableStickyHeaders
+            layout!.disableStickyHeaders = disableStickyHeaders
         }
     }
     
     // MARK: UICollectionViewDataSource
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return self.sections.count
+        return sections.count
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.sections[section].count
+        return sections[section].count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as? RLCollectionCell
         
-        let obj = self.sections[indexPath.section]
+        let obj = sections[indexPath.section]
         let values = Array(obj.values)
         
-        if self.sections.count == 1 {
+        if sections.count == 1 {
             cell!.textLabel!.text = "\(values[indexPath.item])\(indexPath.item)"
         }else {
             cell!.textLabel!.text = values[indexPath.item]
@@ -80,7 +80,7 @@ class RLBaseCollectionController: UICollectionViewController {
             
             let header = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "sectionHeader", forIndexPath: indexPath) as? RLSectionHeader
             
-            let obj = self.sections[indexPath.section]
+            let obj = sections[indexPath.section]
             let values = Array(obj.keys)
             
             header!.textLabel!.text = values[indexPath.item]

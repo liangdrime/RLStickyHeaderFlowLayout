@@ -18,13 +18,13 @@ public class RLStickyHeaderFlowLayoutAttributes: UICollectionViewLayoutAttribute
         }
         set {
             super.zIndex = newValue
-            self.transform3D = CATransform3DMakeTranslation(0, 0, newValue == 1 ? -1 : 0)
+            transform3D = CATransform3DMakeTranslation(0, 0, newValue == 1 ? -1 : 0)
         }
     }
     
     override public func copyWithZone(zone: NSZone) -> AnyObject {
         let copy:RLStickyHeaderFlowLayoutAttributes = super.copyWithZone(zone) as! RLStickyHeaderFlowLayoutAttributes
-        copy.progressiveness = self.progressiveness
+        copy.progressiveness = progressiveness
         return copy
     }
 }
