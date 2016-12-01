@@ -5,6 +5,9 @@
 //  Created by Roy lee on 16/7/17.
 //  Copyright © 2016年 Roy lee. All rights reserved.
 //
+// Converted to Swift 3 by Mark R. Masterson For Ridebrain
+//
+
 
 import Foundation
 import UIKit
@@ -52,6 +55,7 @@ extension RLStickyHeaderFlowLayout {
             collectionView?.isPrefetchingEnabled = false
         } else {
             // Fallback on earlier versions
+            // The Fallback is already in place - this is needed for iOS10 and Swift 3
         }
     }
     
@@ -220,7 +224,7 @@ extension RLStickyHeaderFlowLayout {
     }
     
     override open func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-        return true
+        return true //Prefetch fallback
     }
     
     override class open var layoutAttributesClass : AnyClass {
@@ -303,7 +307,6 @@ extension RLStickyHeaderFlowLayout {
     }
 
 }
-
 
 // MARK: Debuging
 extension UICollectionViewLayoutAttributes {
