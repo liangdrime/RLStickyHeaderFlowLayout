@@ -20,7 +20,7 @@ class RLStickyParallaxHeaderController: RLBaseCollectionController {
         disableStickyHeaders = true
         
         // load header
-        headerNib = UINib.init(nibName: "RLAlwaysOnTopHeader", bundle: NSBundle.mainBundle())
+        headerNib = UINib.init(nibName: "RLAlwaysOnTopHeader", bundle: Bundle.main)
         
         // init data
         var data: [String:String] = [:]
@@ -36,16 +36,16 @@ class RLStickyParallaxHeaderController: RLBaseCollectionController {
         collectionView!.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     }
     
-    override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         if kind == UICollectionElementKindSectionHeader {
             
-            let header = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "sectionHeader", forIndexPath: indexPath) as? RLSectionHeader
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "sectionHeader", for: indexPath) as? RLSectionHeader
             
             return header!
             
         } else if kind == RLStickyHeaderParallaxHeader {
-            let header = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "header", forIndexPath: indexPath)
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath)
             
             return header
         }

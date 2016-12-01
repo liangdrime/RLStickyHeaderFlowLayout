@@ -19,7 +19,7 @@ class RLGrowHeaderController: RLBaseCollectionController {
         disableStickyHeaders = true
         
         // load header
-        headerNib = UINib.init(nibName: "RLGrowHeader", bundle: NSBundle.mainBundle())
+        headerNib = UINib.init(nibName: "RLGrowHeader", bundle: Bundle.main)
         
         // init data
         sections = [["Twitter":"http://twitter.com"],

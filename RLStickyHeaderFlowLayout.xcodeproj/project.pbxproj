@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2872A0C31DF0A8B000380841 /* CG-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2872A0C21DF0A8B000380841 /* CG-Extensions.swift */; };
 		7DAB52821D3CA2BB0080B7D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52811D3CA2BB0080B7D6 /* AppDelegate.swift */; };
 		7DAB52841D3CA2BB0080B7D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB52831D3CA2BB0080B7D6 /* ViewController.swift */; };
 		7DAB52891D3CA2BB0080B7D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DAB52881D3CA2BB0080B7D6 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2872A0C21DF0A8B000380841 /* CG-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CG-Extensions.swift"; sourceTree = "<group>"; };
 		7DAB527E1D3CA2BB0080B7D6 /* RLStickyHeaderFlowLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RLStickyHeaderFlowLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DAB52811D3CA2BB0080B7D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DAB52831D3CA2BB0080B7D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				7DAB52881D3CA2BB0080B7D6 /* Assets.xcassets */,
 				7DAB528A1D3CA2BB0080B7D6 /* LaunchScreen.storyboard */,
 				7DAB528D1D3CA2BB0080B7D6 /* Info.plist */,
+				2872A0C21DF0A8B000380841 /* CG-Extensions.swift */,
 			);
 			path = RLStickyHeaderFlowLayout;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				TargetAttributes = {
 					7DAB527D1D3CA2BB0080B7D6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = MPKS94G26Q;
 					};
 					7DAB52911D3CA2BB0080B7D6 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -311,6 +315,7 @@
 				7DAB52B61D3CA39C0080B7D6 /* RLSectionHeader.swift in Sources */,
 				7DAB52B91D3CA3C70080B7D6 /* RLAlwaysOnTopHeader.swift in Sources */,
 				7DAB52B01D3CA2DE0080B7D6 /* RLParallaxHeaderController.swift in Sources */,
+				2872A0C31DF0A8B000380841 /* CG-Extensions.swift in Sources */,
 				7DAB52AF1D3CA2DE0080B7D6 /* RLLockedHeaderController.swift in Sources */,
 				7DAB52B41D3CA36C0080B7D6 /* RLCollectionCell.swift in Sources */,
 			);
@@ -441,12 +446,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MPKS94G26Q;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = RLStickyHeaderFlowLayout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mengliang.RLStickyHeaderFlowLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -454,12 +461,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MPKS94G26Q;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = RLStickyHeaderFlowLayout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mengliang.RLStickyHeaderFlowLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
