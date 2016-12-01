@@ -5,6 +5,9 @@
 //  Created by Roy lee on 16/7/17.
 //  Copyright © 2016年 Roy lee. All rights reserved.
 //
+// Converted to Swift 3 by Mark R. Masterson For Ridebrain
+//
+//
 
 import UIKit
 
@@ -24,10 +27,10 @@ class RLBaseCollectionController: UICollectionViewController {
         super.viewDidLoad()
         
         reloadLayout()
-        collectionView?.registerNib(headerNib, forSupplementaryViewOfKind: RLStickyHeaderParallaxHeader, withReuseIdentifier: "header")
+        collectionView?.register(headerNib, forSupplementaryViewOfKind: RLStickyHeaderParallaxHeader, withReuseIdentifier: "header")
     }
     
-    override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+    override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         reloadLayout()
     }
     
@@ -35,11 +38,11 @@ class RLBaseCollectionController: UICollectionViewController {
         let layout = collectionViewLayout as? RLStickyHeaderFlowLayout
         
         if (layout != nil) {
-            layout!.itemSize = CGSizeMake(view.frame.size.width, layout!.itemSize.height)
+            layout!.itemSize = CGSize(view.frame.size.width, layout!.itemSize.height)
             
-            layout!.parallaxHeaderReferenceSize = CGSizeMake(view.frame.size.width, parallaxHeaderReferenceHeight)
+            layout!.parallaxHeaderReferenceSize = CGSize(view.frame.size.width, parallaxHeaderReferenceHeight)
             
-            layout!.parallaxHeaderMinimumReferenceSize = CGSizeMake(view.frame.size.width, parallaxHeaderMinimumReferenceHeight)
+            layout!.parallaxHeaderMinimumReferenceSize = CGSize(view.frame.size.width, parallaxHeaderMinimumReferenceHeight)
             layout!.parallaxHeaderAlwaysOnTop = parallaxHeaderAlwaysOnTop
             
             // If we want to disable the sticky header effect
@@ -49,17 +52,19 @@ class RLBaseCollectionController: UICollectionViewController {
     
     // MARK: UICollectionViewDataSource
     
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return sections.count
+
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sections[section].count
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as? RLCollectionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? RLCollectionCell
         
         let obj = sections[indexPath.section]
         let values = Array(obj.values)
@@ -74,11 +79,13 @@ class RLBaseCollectionController: UICollectionViewController {
         return cell!
     }
     
-    override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
         if kind == UICollectionElementKindSectionHeader {
             
             
-            let header = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "sectionHeader", forIndexPath: indexPath) as? RLSectionHeader
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "sectionHeader", for: indexPath as IndexPath) as? RLSectionHeader
             
             let obj = sections[indexPath.section]
             let values = Array(obj.keys)
@@ -88,7 +95,7 @@ class RLBaseCollectionController: UICollectionViewController {
             return header!
             
         } else if kind == RLStickyHeaderParallaxHeader {
-            let header = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "header", forIndexPath: indexPath)
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath as IndexPath)
             
             return header
         }
@@ -98,7 +105,7 @@ class RLBaseCollectionController: UICollectionViewController {
     
     // MARK: UICollectionViewDelegate
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("hit cell at \(indexPath).....")
     }
     

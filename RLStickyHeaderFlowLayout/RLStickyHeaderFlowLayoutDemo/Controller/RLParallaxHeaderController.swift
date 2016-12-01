@@ -5,6 +5,9 @@
 //  Created by Roy lee on 16/7/17.
 //  Copyright © 2016年 Roy lee. All rights reserved.
 //
+// Converted to Swift 3 by Mark R. Masterson For Ridebrain
+//
+//
 
 import UIKit
 
@@ -18,7 +21,7 @@ class RLParallaxHeaderController: RLBaseCollectionController {
         parallaxHeaderMinimumReferenceHeight = 0
         
         // load header
-        headerNib = UINib.init(nibName: "RLParallaxHeader", bundle: NSBundle.mainBundle())
+        headerNib = UINib.init(nibName: "RLParallaxHeader", bundle: Bundle.main)
         
         // init data
         sections = [["Twitter":"http://twitter.com"],
@@ -34,9 +37,9 @@ class RLParallaxHeaderController: RLBaseCollectionController {
     }
     
     @IBAction func reloadButtonDidPress(sender: AnyObject) {
-        let indexSet = NSIndexSet.init(indexesInRange: NSMakeRange(0, collectionView!.numberOfSections()))
+        let indexSet = NSIndexSet.init(indexesIn: NSMakeRange(0, collectionView!.numberOfSections))
         
-        collectionView!.reloadSections(indexSet)
+        collectionView!.reloadSections(indexSet as IndexSet)
     }
     
     

@@ -5,6 +5,9 @@
 //  Created by Roy lee on 16/7/19.
 //  Copyright © 2016年 Roy lee. All rights reserved.
 //
+// Converted to Swift 3 by Mark R. Masterson For Ridebrain
+//
+//
 
 import XCTest
 @testable import RLStickyHeaderFlowLayoutFramework
@@ -28,7 +31,7 @@ class RLStickyHeaderFlowLayoutFrameworkTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

@@ -5,6 +5,9 @@
 //  Created by Roy lee on 16/7/17.
 //  Copyright © 2016年 Roy lee. All rights reserved.
 //
+// Converted to Swift 3 by Mark R. Masterson For Ridebrain
+//
+
 
 import Foundation
 import UIKit
@@ -15,15 +18,16 @@ public let RLStickyHeaderParallaxHeader = "RLStickyHeaderParallaxHeader"
 let kHeaderZIndex = 1024
 
 
-public class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
-    var _parallaxHeaderReferenceSize: CGSize! = CGSizeZero
+open class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
+
+    var _parallaxHeaderReferenceSize: CGSize! = CGSize.zero
     /// Properties:
     ///
     /// - Below four properties is used to config the parallax header and section header
     /// - If you want to have a header(eg.parallax header) on the top, you must registe this kind key `RLStickyHeaderParallaxHeader` with your `UICollectionReusableView`
     ///
     /// Set the default size of parallaxHeader by this property
-    public var parallaxHeaderReferenceSize: CGSize! {
+    open var parallaxHeaderReferenceSize: CGSize! {
         get {
             return self._parallaxHeaderReferenceSize
         }
@@ -34,23 +38,29 @@ public class RLStickyHeaderFlowLayout: UICollectionViewFlowLayout {
         }
     }
     /// Mininum size of parallaxHeader
-    public var parallaxHeaderMinimumReferenceSize:CGSize! = CGSizeZero
+    open var parallaxHeaderMinimumReferenceSize:CGSize! = CGSize.zero
     /// Set the parallax header on top or move when scroll, default is false
-    public var parallaxHeaderAlwaysOnTop:Bool! = false
+    open var parallaxHeaderAlwaysOnTop:Bool! = false
     /// If you set this property true the section header will not sticky, default is false
-    public var disableStickyHeaders:Bool! = false
+    open var disableStickyHeaders:Bool! = false
 }
 
 
 extension RLStickyHeaderFlowLayout {
     
     // Override layout methods
-    override public func prepareLayout() {
-        super.prepareLayout()
+    override open func prepare() {
+        super.prepare()
+        if #available(iOS 10.0, *) {
+            collectionView?.isPrefetchingEnabled = false
+        } else {
+            // Fallback on earlier versions
+            // The Fallback is already in place - this is needed for iOS10 and Swift 3
+        }
     }
     
-    override public func initialLayoutAttributesForAppearingSupplementaryElementOfKind(elementKind: String, atIndexPath elementIndexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
-        let attributes = super.initialLayoutAttributesForAppearingSupplementaryElementOfKind(elementKind, atIndexPath: elementIndexPath)
+    override open func initialLayoutAttributesForAppearingSupplementaryElement(ofKind elementKind: String, at elementIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        let attributes = super.initialLayoutAttributesForAppearingSupplementaryElement(ofKind: elementKind, at: elementIndexPath)
         if elementKind == RLStickyHeaderParallaxHeader {
             // sticky header do not need to offset
             return nil
@@ -64,34 +74,35 @@ extension RLStickyHeaderFlowLayout {
         return attributes
     }
     
-    override public func finalLayoutAttributesForDisappearingSupplementaryElementOfKind(elementKind: String, atIndexPath elementIndexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
+    override open func finalLayoutAttributesForDisappearingSupplementaryElement(ofKind elementKind: String, at elementIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         if elementKind == RLStickyHeaderParallaxHeader {
-            let attribute = layoutAttributesForSupplementaryViewOfKind(elementKind, atIndexPath: elementIndexPath) as? RLStickyHeaderFlowLayoutAttributes
+            let attribute = layoutAttributesForSupplementaryView(ofKind: elementKind, at: elementIndexPath) as? RLStickyHeaderFlowLayoutAttributes
             
             updateParallaxHeaderAttribute(attribute!)
             return attribute
         } else {
-            return super.finalLayoutAttributesForDisappearingSupplementaryElementOfKind(elementKind, atIndexPath: elementIndexPath)
+            return super.finalLayoutAttributesForDisappearingSupplementaryElement(ofKind: elementKind, at: elementIndexPath)
         }
     }
     
-    override public func layoutAttributesForSupplementaryViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
-        var attributes = super.layoutAttributesForSupplementaryViewOfKind(elementKind, atIndexPath: indexPath)
+    override open func layoutAttributesForSupplementaryView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        var attributes = super.layoutAttributesForSupplementaryView(ofKind: elementKind, at: indexPath)
         if (attributes == nil) && (elementKind == RLStickyHeaderParallaxHeader) {
-            attributes = RLStickyHeaderFlowLayoutAttributes.init(forSupplementaryViewOfKind:elementKind, withIndexPath:indexPath)
+            attributes = RLStickyHeaderFlowLayoutAttributes.init(forSupplementaryViewOfKind:elementKind, with:indexPath)
+            
         }
         return attributes
     }
     
     // Core function: Reutrn the attributes will be used, you can custom these attributes to fit.
-    override public func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override open func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         if collectionView!.dataSource != nil {
             // The rect should compensate the header size
             var adjustedRect = rect
             adjustedRect.origin.y -= parallaxHeaderReferenceSize.height
             
             var allItems = [UICollectionViewLayoutAttributes]()
-            let originalAttributes = super.layoutAttributesForElementsInRect(adjustedRect)
+            let originalAttributes = super.layoutAttributesForElements(in: adjustedRect)
             //Perform a deep copy of the attributes returned from super
             for originalAttribute: UICollectionViewLayoutAttributes in originalAttributes! {
                 allItems.append(originalAttribute.copy() as! UICollectionViewLayoutAttributes)
@@ -138,7 +149,7 @@ extension RLStickyHeaderFlowLayout {
             
             // when the visible rect is at top of the screen, make sure we see
             // the parallex header
-            if CGRectGetMinY(rect) <= 0 {
+            if rect.minY <= 0 {
                 visibleParallexHeader = true
             }
             
@@ -155,8 +166,8 @@ extension RLStickyHeaderFlowLayout {
             
             
             // Create the attributes for the Parallex header
-            if visibleParallexHeader && CGSizeEqualToSize(CGSizeZero, parallaxHeaderReferenceSize) == false {
-                let currentAttribute = RLStickyHeaderFlowLayoutAttributes.init(forSupplementaryViewOfKind:RLStickyHeaderParallaxHeader, withIndexPath:NSIndexPath.init(index: 0))
+            if visibleParallexHeader && CGSize.zero.equalTo(parallaxHeaderReferenceSize) == false {
+                let currentAttribute = RLStickyHeaderFlowLayoutAttributes.init(forSupplementaryViewOfKind:RLStickyHeaderParallaxHeader, with:IndexPath.init(index: 0))
                 updateParallaxHeaderAttribute(currentAttribute)
                 
                 allItems.append(currentAttribute)
@@ -171,13 +182,13 @@ extension RLStickyHeaderFlowLayout {
                     var header = headers[indexPathKey]
                     // CollectionView automatically removes headers not in bounds
                     if header == nil {
-                        header = (layoutAttributesForSupplementaryViewOfKind(UICollectionElementKindSectionHeader, atIndexPath: NSIndexPath.init(forItem: 0, inSection: indexPath.section)))! as UICollectionViewLayoutAttributes
+                        header = (layoutAttributesForSupplementaryView(ofKind: UICollectionElementKindSectionHeader, at: IndexPath.init(item: 0, section: indexPath.section)))! as UICollectionViewLayoutAttributes
                         
-                        if CGSizeEqualToSize(CGSizeZero, header!.frame.size) == false {
+                        if CGSize.zero.equalTo(header!.frame.size) == false {
                             allItems.append(header!)
                         }
                     }
-                    if CGSizeEqualToSize(CGSizeZero, header!.frame.size) == false {
+                    if CGSize.zero.equalTo(header!.frame.size) == false {
                         updateHeaderAttributes(header!, lastCellAttributes:(lastCells[indexPathKey])!)
                     }
                 }
@@ -193,43 +204,43 @@ extension RLStickyHeaderFlowLayout {
         }
     }
     
-    override public func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
-        let attributes = super.layoutAttributesForItemAtIndexPath(indexPath)!.copy() as? UICollectionViewLayoutAttributes
+    override open func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        let attributes = super.layoutAttributesForItem(at: indexPath)!.copy() as? UICollectionViewLayoutAttributes
         var frame = attributes!.frame
         frame.origin.y += parallaxHeaderReferenceSize.height
         attributes!.frame = frame
         return attributes
     }
     
-    override public func collectionViewContentSize() -> CGSize {
+    override open var collectionViewContentSize : CGSize {
         // If not part of view hierarchy then return CGSizeZero (as in docs).
         // Call super.collectionViewContentSize can cause EXC_BAD_ACCESS when collectionView has no superview.
         if collectionView!.superview == nil {
-            return CGSizeZero
+            return CGSize.zero
         }
-        var size = super.collectionViewContentSize()
+        var size = super.collectionViewContentSize
         size.height += parallaxHeaderReferenceSize.height
         return size
     }
     
-    override public func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
-        return true
+    override open func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+        return true //Prefetch fallback
     }
     
-    override class public func layoutAttributesClass() -> AnyClass {
+    override class open var layoutAttributesClass : AnyClass {
         return RLStickyHeaderFlowLayoutAttributes.self
     }
     
     // MARK: Private Helper
-    private func updateHeaderAttributes(attributes: UICollectionViewLayoutAttributes, lastCellAttributes lastAttributes: UICollectionViewLayoutAttributes) {
+    fileprivate func updateHeaderAttributes(_ attributes: UICollectionViewLayoutAttributes, lastCellAttributes lastAttributes: UICollectionViewLayoutAttributes) {
         let currentBounds = collectionView!.bounds
         attributes.zIndex = kHeaderZIndex
-        attributes.hidden = false
+        attributes.isHidden = false
         
         var origin = attributes.frame.origin
         
-        let sectionMaxY = CGRectGetMaxY(lastAttributes.frame) - attributes.frame.size.height
-        var y = CGRectGetMaxY(currentBounds) - currentBounds.size.height + collectionView!.contentInset.top
+        let sectionMaxY = lastAttributes.frame.maxY - attributes.frame.size.height
+        var y = currentBounds.maxY - currentBounds.size.height + collectionView!.contentInset.top
         
         if parallaxHeaderAlwaysOnTop! {
             y += parallaxHeaderMinimumReferenceSize.height
@@ -247,13 +258,13 @@ extension RLStickyHeaderFlowLayout {
      *  Update the parallax header, reuslt is: orgin.y of header attribute will be changed to keep the positon of header always same
      *  `parallaxHeaderMinimumReferenceSize` determines the mininum size of the header, the height of the header will change when scrolling, and you parallax header is created through this characteristic.
      */
-    private func updateParallaxHeaderAttribute(currentAttribute: RLStickyHeaderFlowLayoutAttributes) {
+    fileprivate func updateParallaxHeaderAttribute(_ currentAttribute: RLStickyHeaderFlowLayoutAttributes) {
         var frame = currentAttribute.frame
         frame.size.width = parallaxHeaderReferenceSize.width
         frame.size.height = parallaxHeaderReferenceSize.height
         
         let bounds = collectionView!.bounds
-        let maxY = CGRectGetMaxY(frame)
+        let maxY = frame.maxY
         
         // make sure the frame won't be negative values
         var y = fmin(maxY - parallaxHeaderMinimumReferenceSize.height, bounds.origin.y + collectionView!.contentInset.top)
@@ -277,11 +288,11 @@ extension RLStickyHeaderFlowLayout {
             currentAttribute.zIndex = 2000
         }
         
-        currentAttribute.frame = CGRectMake(frame.origin.x, y, frame.size.width, height)
+        currentAttribute.frame = CGRect(x: frame.origin.x, y: y, width: frame.size.width, height: height)
     }
     
     // MARK: Debuging
-    private func debugLayoutAttributes(layoutAttributes: [UICollectionViewLayoutAttributes]) {
+    fileprivate func debugLayoutAttributes(_ layoutAttributes: [UICollectionViewLayoutAttributes]) {
         var hasInvalid: Bool = false
         for attr in layoutAttributes {
             hasInvalid = !attr.isValid()
@@ -297,16 +308,15 @@ extension RLStickyHeaderFlowLayout {
 
 }
 
-
 // MARK: Debuging
 extension UICollectionViewLayoutAttributes {
     
-    override public var description:String {
+    override open var description:String {
 
-        let indexPath = valueForKey("indexPath")
-        let zIndex = valueForKey("zIndex")
-        let representedElementKind = valueForKey("representedElementKind")
-        let frame = valueForKey("frame")
+        let indexPath = value(forKey: "indexPath")
+        let zIndex = value(forKey: "zIndex")
+        let representedElementKind = value(forKey: "representedElementKind")
+        let frame = value(forKey: "frame")
         
         
         return "RLStickyHeaderFlowLayout indexPath: \(indexPath) zIndex: \(zIndex) valid: \(isValid()) kind: \(representedElementKind) frame:\(frame)"
@@ -314,12 +324,12 @@ extension UICollectionViewLayoutAttributes {
     
     func isValid() -> Bool {
         switch (representedElementCategory) {
-        case .Cell:
+        case .cell:
             if zIndex != 1 {
                 return false
             }
             return true
-        case .SupplementaryView:
+        case .supplementaryView:
             if representedElementKind == RLStickyHeaderParallaxHeader {
                 return true
             } else if zIndex < 1024 {

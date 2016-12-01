@@ -5,6 +5,9 @@
 //  Created by Roy lee on 16/7/17.
 //  Copyright © 2016年 Roy lee. All rights reserved.
 //
+// Converted to Swift 3 by Mark R. Masterson For Ridebrain
+//
+//
 
 import UIKit
 
@@ -19,7 +22,7 @@ class RLGrowHeaderController: RLBaseCollectionController {
         disableStickyHeaders = true
         
         // load header
-        headerNib = UINib.init(nibName: "RLGrowHeader", bundle: NSBundle.mainBundle())
+        headerNib = UINib.init(nibName: "RLGrowHeader", bundle: Bundle.main)
         
         // init data
         sections = [["Twitter":"http://twitter.com"],

@@ -5,14 +5,17 @@
 //  Created by Roy lee on 16/7/17.
 //  Copyright © 2016年 Roy lee. All rights reserved.
 //
+// Converted to Swift 3 by Mark R. Masterson For Ridebrain
+//
+//
 
 import Foundation
 import UIKit
 
-public class RLStickyHeaderFlowLayoutAttributes: UICollectionViewLayoutAttributes {
-    public var progressiveness: CGFloat! = 0
+open class RLStickyHeaderFlowLayoutAttributes: UICollectionViewLayoutAttributes {
+    open var progressiveness: CGFloat! = 0
     
-    override public var zIndex: Int {
+    override open var zIndex: Int {
         get {
             return super.zIndex
         }
@@ -22,8 +25,8 @@ public class RLStickyHeaderFlowLayoutAttributes: UICollectionViewLayoutAttribute
         }
     }
     
-    override public func copyWithZone(zone: NSZone) -> AnyObject {
-        let copy:RLStickyHeaderFlowLayoutAttributes = super.copyWithZone(zone) as! RLStickyHeaderFlowLayoutAttributes
+    override open func copy(with zone: NSZone?) -> Any {
+        let copy:RLStickyHeaderFlowLayoutAttributes = super.copy(with: zone) as! RLStickyHeaderFlowLayoutAttributes
         copy.progressiveness = progressiveness
         return copy
     }

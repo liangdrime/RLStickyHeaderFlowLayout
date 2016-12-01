@@ -5,6 +5,9 @@
 //  Created by Roy lee on 16/7/17.
 //  Copyright © 2016年 Roy lee. All rights reserved.
 //
+// Converted to Swift 3 by Mark R. Masterson For Ridebrain
+//
+//
 
 import UIKit
 
@@ -17,7 +20,7 @@ class RLLockedHeaderController: RLBaseCollectionController {
         parallaxHeaderMinimumReferenceHeight = 44
         
         // load header
-        headerNib = UINib.init(nibName: "RLSearchBarHeader", bundle: NSBundle.mainBundle())
+        headerNib = UINib.init(nibName: "RLSearchBarHeader", bundle: Bundle.main)
         
         // init data
         sections = [["Twitter":"http://twitter.com"],
@@ -40,7 +43,7 @@ class RLLockedHeaderController: RLBaseCollectionController {
         
         collectionView!.scrollIndicatorInsets = UIEdgeInsetsMake(44, 0, 0, 0);
         
-        let add = UIBarButtonItem.init(title: "Add", style: .Plain, target: self, action: #selector(RLLockedHeaderController.add))
+        let add = UIBarButtonItem.init(title: "Add", style: .plain, target: self, action: #selector(RLLockedHeaderController.add))
         navigationItem.rightBarButtonItem = add
     }
     
@@ -67,14 +70,14 @@ class RLLockedHeaderController: RLBaseCollectionController {
             for index in 0..<new.count {
                 weakSelf!.sections.append(new[index])
                 
-                let indexPath = NSIndexPath.init(forItem: 0, inSection: index)
+                let indexPath = NSIndexPath(item: 0, section: index)
                 
-                indexPaths.append(indexPath)
-                set.addIndex(index)
+                indexPaths.append(indexPath as NSIndexPath)
+                set.add(index)
             }
             
-            weakSelf!.collectionView?.insertSections(set)
-            weakSelf!.collectionView?.insertItemsAtIndexPaths(indexPaths)
+            weakSelf!.collectionView?.insertSections(set as IndexSet)
+            weakSelf!.collectionView?.insertItems(at: indexPaths as [IndexPath])
             }, completion: { (com: Bool) in
                 
         })
